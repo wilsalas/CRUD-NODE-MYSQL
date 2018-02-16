@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/pnotify.custom.min.css">
+    <style>
+        body {
+            background-color: #000;
+        }
+    </style>
+    <title>Test Node Mysql</title>
+</head>
+<body id="body_color">
+    <h1 style="text-align: center; color:white">{{title}}</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-xs-12 col-sm-12">
+                <form id="frm_send" enctype="multipart/form-data">
+                    <input type="text"  id="title" placeholder="Enter you name" class="form-control"><br>
+                    <textarea name="message" id="message" cols="30" rows="5" class="form-control"></textarea>
+                    <br>
+                    <input type="submit" value="Send" class="btn btn-outline-success">
+                </form>
+                <br>
+                <ul class="list-group"></ul>
+                <br>
+                <button id="btnclear" class="btn btn-outline-danger" style="display: none">Delete messages</button><br>
+                <textarea name="docMessage" id="docMessage" cols="30" rows="5" class="form-control" placeholder="Enter message!"></textarea>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/socket.io.js"></script>
+<script src="js/pnotify.custom.min.js"></script>
+<script src="js/main.js"></script> 
+{{!-- <script>
+    (function () {
+    fetch('/post', {
+        method: 'post',
+        body: { name: 'wil' }
+    })
+        .then(res => res.json())
+        .then((data) => {
+            console.log(data)
+        }).catch(err => {
+            console.log("Error: " + err.message)
+        })
+    })();    
+</script> --}}
+</html>
